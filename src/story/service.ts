@@ -75,3 +75,7 @@ const MOCK_STORIES: Story[] = [
 export function getStoryList(): Promise<Story[]> {
     return Promise.resolve(MOCK_STORIES)
 }
+
+export function getStory(storyId: string): Promise<Story | undefined> {
+    return Promise.resolve(MOCK_STORIES.find(item => item.id === storyId))
+}
